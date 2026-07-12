@@ -7,7 +7,7 @@ class wizard:
     def cast_spell(self):
         print(self.name + "  is casting a spell...!")
         time.sleep(2)
-
+        h=3
         damage = random.randint(0, 50)
 
         print("🔥Fireball")
