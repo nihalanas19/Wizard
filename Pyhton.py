@@ -10,11 +10,12 @@ class wizard:
     
     def cast_spell(self):
         spell = random.choice(["🔥Fireball", "🧊Ice Blast", "⚡Lightning", "🌪️Wind Slash"])
+        damage = random.randint(10, 30)
         print(self.name, "is preparing a spell...")
         time.sleep(2)
         print(self.name, "casts", spell + "!")
         print("✨ The spell was successful!")
-      
+        print("Damage:", damage)
 
     def introduce(self):
         print("Hello! I am", self.name)
