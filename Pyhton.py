@@ -1,24 +1,52 @@
-class Robot:
-    def __init__(self, name, power):
-        self.name = name
-        self.power = power
+import random
+import time
 
-    def introduce(self):
-        print("Hello! My name is " + self.name)
+while True:
+    print("==========================")
+    print("⚽ FOOTBALL CAREER SIMULATOR")
+    print("==========================")
 
-    def show_power(self):
-        print("Power:", self.power)
+    player_name = input("Enter your player's name: ")
+    position = input("Enter your player's position (striker, midfielder, defender, goalkeeper): ").lower()
 
-    def work(self):
-        print(self.name, "is working")
+    print()
+    print("Generating career...")
+    time.sleep(2)
 
-Robot1 = Robot("Robo", "122")
-Robot2 = Robot("Alpha", "90")
+    print("👤 Player Name:", player_name)
+    print("📌 Position:", position)
+    print()
 
-Robot1.introduce()
-Robot1.show_power()
-Robot1.work()
+    if position == "striker":
+        print("🎯 Career Goals:", random.randint(500, 1200))
+        print("🤝 Career Assists:", random.randint(100, 400))
+        print("🏆 Career Trophies:", random.randint(5, 40))
 
-Robot2.introduce()
-Robot2.show_power()
-Robot2.work()
+    elif position == "midfielder":
+        print("🎯 Career Goals:", random.randint(100, 400))
+        print("🤝 Career Assists:", random.randint(300, 900))
+        print("🏆 Career Trophies:", random.randint(5, 40))
+
+    elif position == "defender":
+        print("🛡️ Career Tackles:", random.randint(1000, 4000))
+        print("🚧 Career Clearances:", random.randint(1000, 5000))
+        print("🏆 Career Trophies:", random.randint(5, 40))
+
+    elif position == "goalkeeper":
+        print("🧤 Career Saves:", random.randint(1000, 5000))
+        print("🥅 Clean Sheets:", random.randint(100, 600))
+        print("🏆 Career Trophies:", random.randint(5, 40))
+
+    else:
+        print("❌ Invalid position!")
+
+    print()
+
+    again = input("Play again? (yes/no): ").lower()
+
+    if again == "no":
+        print("👋 Thanks for playing!")
+        break
+
+    print()
+    time.sleep(1)
