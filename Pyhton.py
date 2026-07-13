@@ -1,37 +1,24 @@
-import random
-import time
-class wizard:
-    def __init__(self, name, health):
+class Robot:
+    def __init__(self, name, power):
         self.name = name
-        self.health = health
-
-    def show_health(self):
-        print(self.name, "has", self.health, "health.")
-    
-    def cast_spell(self):
-        spell = random.choice(["🔥Fireball", "🧊Ice Blast", "⚡Lightning", "🌪️Wind Slash"])
-        damage = random.randint(10, 30)
-        print(self.name, "is preparing a spell...")
-        time.sleep(2)
-        print(self.name, "casts", spell + "!")
-        print("✨ The spell was successful!")
-        print("Damage:", damage)
+        self.power = power
 
     def introduce(self):
-        print("Hello! I am", self.name)
+        print("Hello! My name is " + self.name)
 
-wizard1 = wizard("Nihal", 100)
-wizard2 = wizard("Merlin", 80)
-wizard3 = wizard("Harry", 120)
+    def show_power(self):
+        print("Power:", self.power)
 
-wizard1.introduce()
-wizard1.show_health()
-wizard1.cast_spell()
+    def work(self):
+        print(self.name, "is working")
 
-wizard2.introduce()
-wizard2.show_health()
-wizard2.cast_spell()
+Robot1 = Robot("Robo", "122")
+Robot2 = Robot("Alpha", "90")
 
-wizard3.introduce()
-wizard3.show_health()
-wizard3.cast_spell()
+Robot1.introduce()
+Robot1.show_power()
+Robot1.work()
+
+Robot2.introduce()
+Robot2.show_power()
+Robot2.work()
